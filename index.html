@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="calculator">
+        <form action="">
+            <div id="row1" class="row">
+                <input type="text" value="0" name="display" class="result" id="result" readonly>
+            </div>
+            <div class="row">
+                <input type="button" value="C" id="clearB" onclick="clearDisplay()">
+                <input type="button" value="DE" id="deleteB" onclick="deleteLastChar()">
+                <input type="button" value="/" class="operator" id="division" onclick="appendToDisplay('/')">
+            </div>
+            <div class="row">
+                <input type="button" value="7" class="num" onclick="appendToDisplay('7')">
+                <input type="button" value="8" class="num" onclick="appendToDisplay('8')">
+                <input type="button" value="9" class="num" onclick="appendToDisplay('9')">
+                <input type="button" value="x" class="operator" id="multiplaction" onclick="appendToDisplay('*')">
+            </div>
+            <div class="row">
+                <input type="button" value="4" class="num" onclick="appendToDisplay('4')"> 
+                <input type="button" value="5" class="num" onclick="appendToDisplay('5')">
+                <input type="button" value="6" class="num" onclick="appendToDisplay('6')">
+                <input type="button" value="-" class="operator" id="minus" onclick="appendToDisplay('-')">
+            </div>
+            <div class="row">
+                <input type="button" value="1" class="num" onclick="appendToDisplay('1')">
+                <input type="button" value="2" class="num" onclick="appendToDisplay('2')">
+                <input type="button" value="3" class="num" onclick="appendToDisplay('3')">
+                <input type="button" value="+" class="operator" id="plus" onclick="appendToDisplay('+')">
+            </div>
+            <div class="row">
+                <input type="button" value="0" id="num0" onclick="appendToDisplay('0')">
+                <input type="button" value="=" class="operator" id="equal" onclick="calculateResult()">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
